@@ -1,0 +1,119 @@
+1.常用的标签
+div：分小节（方便自己查看）
+span：标记某一行的关键内容（相当于用荧光笔划）（方便后续CSS美化）【为什么用span不用div？】
+ol<有序的> ul<无序的> ：列表（相当于就是
+    1，
+    2， ol
+    3，
+
+    · aa
+    · aa    ul
+    · aa
+）
+li：就是显示列表中的每一列的内容
+form：表单 可以理解为一个容器 里面可以放 
+    <input>
+    <textarea>
+    <button>
+    <select>
+    <option>
+    <optgroup>
+    <fieldset>1.常用的标签
+div：分小节（方便自己查看）
+span：标记某一行的关键内容（相当于用荧光笔划）（方便后续CSS美化）【为什么用span不用div？】
+ol<有序的> ul<无序的> ：列表（相当于就是
+    1，
+    2， ol
+    3，
+
+    · aa
+    · aa    ul
+    · aa
+）
+li：就是显示列表中的每一列的内容
+form：表单 可以理解为一个容器 里面可以放 
+    <input>
+    <textarea>
+    <button>
+    <select>
+    <option>
+    <optgroup>
+    <fieldset>
+    <label>
+    <output>
+这些组件，通过这些来构成一个完整的表单 常见的实例就是学校的登陆页面
+button：按钮
+header：网页上方的菜单栏
+nav：菜单栏中应有的导航链接放置处【语义化：是header的子元素】
+2.inline 和 block：元素的两种类型
+block level elements特点：另起一行；独占一行（整个网页的宽度）
+inline elements特点：不另起一行；仅占用需要的宽度
+3.通过html中的style属性，添加css样式【少用】
+
+1.上节补充：syle标签写在head内（不必要给用户看）
+2.CSS语法：选择器{属性名：属性值；}
+【eg】 p {color:red;font-size:40px;}
+3.通过link标签引用css：（推荐）
+新建css文件，放入和html文件同一文件夹中，用link标签在href属性中引用
+4.部分css选择器：
+element：标签 系统自带的，如h1；
+h1{
+	color :red;
+}
+
+.class：需要在标签中设置class属性；
+.class{
+	color:red;
+}
+
+#id：需要在标签中设置id属性；(与class区别：命名规则上，id独一无二，class一类）
+
+*：所有；
+
+element,element（逗号表示并列关系）
+h1,h2{
+	color：red；
+}
+将h1和h2的color改成red
+
+element element：前标签的子孙中的后标签；（空格表示后代关系）
+a b
+表示a的子孙标签b
+<a>
+	<b></b>	√
+</a>
+<a>
+	<c>
+		<b></b>	√
+	</c>
+</a>
+
+element>element：前标签的儿子中的后标签；（空格表示父子关系）
+a > b
+表示a标签的子标签b，
+<a>
+	<b></b>	√
+</a>
+<a>
+	<c>
+		<b></b>	×
+	</c>
+</a>
+
+element:hover：鼠标经过/悬浮在某个标签时变化；
+
+5.优先级和权重
+| 顺序有影响：style属性>style标签>link css；css中多个标签 服从后者；多个link 服从后者。
+| 明确程度有影响：内部评分。【eg】 h1 a>a
+| !important：选择器{属性名：属性值 !important；}【破坏规则者，少用】
+6.继承：父标签定义的样式会继承给子子孙孙
+    <label>
+    <output>
+这些组件，通过这些来构成一个完整的表单 常见的实例就是学校的登陆页面
+button：按钮
+header：网页上方的菜单栏
+nav：菜单栏中应有的导航链接放置处【语义化：是header的子元素】
+2.inline 和 block：元素的两种类型
+block level elements特点：另起一行；独占一行（整个网页的宽度）
+inline elements特点：不另起一行；仅占用需要的宽度
+3.通过html中的style属性，添加css样式【少用】

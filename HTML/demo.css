@@ -1,0 +1,9 @@
+body{
+    background-color: gray;
+}
+.container{
+    width: 940px;
+    margin: 0 20px;
+    background: white;
+    border-radius: 50px;
+}
