@@ -1,0 +1,32 @@
+1	import java.io.*;
+2	
+3	
+4	/**
+5	 * BufferWriterDemo Ð´Èë»º³åÇødemo
+6	 */
+7	public class BufferWriterDemo {
+8	
+9	    public static void main(String[] args) {
+10	        FileWriter fWriter = null;
+11	        BufferedWriter bWriter = null;
+12	        try {
+13	            fWriter = new FileWriter("demo.txt");
+14	            bWriter = new BufferedWriter(fWriter);
+15	            bWriter.write("nihao");
+16	            bWriter.newLine();
+17	            bWriter.write("next");
+18	            bWriter.flush();
+19	        } catch (Exception e) {
+20	            // TODO: handle exception
+21	        } finally {
+22	            try {
+23	                if (bWriter != null) {
+24	                    bWriter.close();
+25	                }
+26	            } catch (Exception e) {
+27	                // TODO: handle exception
+28	            }
+29	
+30	        }
+31	    }
+32	}
