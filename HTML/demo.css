@@ -1,9 +1,8 @@
-body{
-    background-color: gray;
+.块状{
+    background-color: red;
+    text-align: center;
 }
-.container{
-    width: 940px;
-    margin: 0 20px;
-    background: white;
-    border-radius: 50px;
+.内联{
+    background-color: green;
+    text-align: center;
 }
