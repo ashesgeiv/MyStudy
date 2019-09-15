@@ -71,8 +71,9 @@
     简写
     margin:10px 20px 30px 40px;
     */
-    
-    margin:auto;/*直接居中*/
+
+    margin: auto;
+    /*直接居中*/
     margin-bottom: 50px;
 }
 
@@ -86,4 +87,43 @@
     width: 100px;
     height: 100px;
     background-color: pink;
+}
+
+.s1 {
+    margin-left: 100px;
+    background-color: greenyellow;
+    margin-right: 100px;
+}
+
+.s2 {
+    margin-left: 100px;
+    background-color: greenyellow;
+}
+
+#display和visibility演示1{
+    /*
+    display 属性规定元素应该生成的框的类型。
+    常用的值：   none	此元素不会在页面中显示也不占据位置。
+                block	此元素将显示为块级元素，此元素前后会带有换行符。
+                inline	默认。此元素会被显示为内联元素，元素前后没有换行符。
+                inline-block	行内块元素（有两者元素的特点，即可以设置宽高也不独占一行）。
+    */
+    display: inline-block;
+    width: 500px;
+    height: 100px;
+    background-color: aquamarine;
+}
+#display和visibility演示2{
+    /*
+    visibility 属性规定元素是否可见。
+        即使不可见的元素也会占据页面上的空间。请使用 "display" 属性来创建不占据页面空间的不可见元素。
+        可能的值：
+            visible	默认值。元素是可见的。
+            hidden	元素是不可见的。
+            collapse	当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 "hidden"。
+            inherit	规定应该从父元素继承 visibility 属性的值。    
+    */
+    visibility: hidden;
+    width: 100px;
+    height: 50px;
 }
