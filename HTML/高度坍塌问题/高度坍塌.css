@@ -22,5 +22,10 @@
 
 .box3 {
     border: 10px greenyellow solid;
-    overflow: hidden;
+    
+}
+.box3::after{
+    content:"";
+    display: block;
+    clear: both;
 }
