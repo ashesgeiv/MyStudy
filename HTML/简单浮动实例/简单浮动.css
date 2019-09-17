@@ -38,6 +38,7 @@
     background-color: yellow;
     margin: 0 5%;
     float: left;
+    overflow: hidden;
 }
 .center .box3{
     height: 100%;
@@ -49,13 +50,13 @@
     height: 40%;
     width: 100%;
     background-color: gray;
-    float: left;
+    margin-bottom: 20% ;
     
 }
 .box2 .letme2{
     height: 40%;
     width: 100%;
     background-color: gray;
-    float: right
+    
     
 }

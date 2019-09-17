@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box1 {
+    border: 10px red solid;
+}
+
+.box2 {
+
+    height: 100px;
+    background: yellow;
+}
+
+.contion {
+    background: blue;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.box3 {
+    border: 10px greenyellow solid;
+    overflow: hidden;
+}
