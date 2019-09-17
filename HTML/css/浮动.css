@@ -1,0 +1,30 @@
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /*float: right;*/
+    ;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    float: left;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    float: right;
+}
+.s1{
+    background-color: aqua;
+}
+.s2{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    float: right;
+}

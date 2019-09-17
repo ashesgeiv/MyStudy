@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contion {
+    width: 90%;
+    
+    margin: 0 auto;
+}
+
+.hear {
+    width: 100%;
+    height: 200px;
+    background-color: red;
+}
+.center {
+    width: 100%;
+    height: 600px;
+    background-color: greenyellow;
+    margin: 10px 0px;
+}
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: skyblue;
+}
+
+.center .box1{
+    height: 100%;
+    width: 20%;
+    background-color: aqua;
+    float: left;
+}
+.center .box2{
+    height: 100%;
+    width: 50%;
+    background-color: yellow;
+    margin: 0 5%;
+    float: left;
+    overflow: hidden;
+}
+.center .box3{
+    height: 100%;
+    width: 20%;
+    background-color: pink;
+    float: left;
+}
+.box2 .letme1{
+    height: 40%;
+    width: 100%;
+    background-color: gray;
+    margin-bottom: 20% ;
+    
+}
+.box2 .letme2{
+    height: 40%;
+    width: 100%;
+    background-color: gray;
+    
+    
+}

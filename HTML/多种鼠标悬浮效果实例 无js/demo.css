@@ -36,9 +36,9 @@ body {
     content: "";
     
     position: absolute;
-    top: 50%;/*距离顶部50%*/
-    left: 50%;/*距离左边50%*/
-    transform: translate(-60%, -90%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: -1;
     transition: 0.6s all ease
 }
