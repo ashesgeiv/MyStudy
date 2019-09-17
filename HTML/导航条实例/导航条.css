@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+ul{
+    width: 1000px;
+    margin: 50px auto;
+    list-style: none;
+    background: yellowgreen;
+    overflow: hidden;
+}
+ul li {
+    float: left;
+    
+    width: 25%;
+
+}
+a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    background-color: red;
+}
