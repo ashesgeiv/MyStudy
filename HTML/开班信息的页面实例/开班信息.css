@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 420px;
+    height: 600px;
+    margin: 50px auto;
+    background-color: aquamarine
+}
+
+.title {
+    height: 56px;
+    background: ghostwhite;
+    border-top: 2px skyblue solid;
+    line-height: 56px;
+    padding: 0px 10px 0px 20px;
+}
+
+.title h3 {
+    float: left;
+    font: 18px/56px "微软雅黑";
+}
+
+.title a {
+    float: right;
+    color: red;
+    font-size: 13px;
+}
+
+.centen{
+    border: 1px grey solid;
+    background-color: white;
+}
