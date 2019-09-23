@@ -5,13 +5,40 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        table{
+        table {
             border: 1px solid black;
             margin: 0 auto;
+            /*
+            spacing用来设置表格间的间距
+            */
             border-spacing: 0;
+            /*
+            border-collapse
+            用来设置表格边框合并
+            一旦设置collapse spacing自动失效
+            */
+            border-collapse: collapse;
         }
-        td{
+
+        td,th {
             border: 1px solid black;
+        }
+        /*
+        隔行变色
+        */
+        tr:nth-child(even){
+            /*
+            even是奇数行
+            odd是偶数行
+            */
+            background-color: #bbff11;
+        }
+        
+        /*
+        移入变色
+        */
+        tr:hover{
+            background-color: yellow;
         }
     </style>
 </head>
@@ -19,11 +46,14 @@
 <body>
     <table>
         <tr>
-            <td>序号</td>
-            <td>姓名</td>
-            <td>年龄</td>
-            <td>身高</td>
-            <td>地址</td>
+            <!--
+                th用于表示表头内容，用法与td一样，不过会有特殊的显示效果
+            -->
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>身高</th>
+            <th>地址</th>
         </tr>
         <tr>
             <td>1</td>
@@ -48,6 +78,97 @@
             <td>33</td>
             <td>33</td>
         </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>22</td>
+            <td>33</td>
+            <td>33</td>
+        </tr>
+
     </table>
 
 
