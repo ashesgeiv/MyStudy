@@ -1,0 +1,20 @@
+.title {
+    width: 151px;
+    height: 69px;
+    background: url(3.png)
+}
+
+.botton {
+    width: 123px;
+    height: 125px;
+    background-image: url(SP.png);
+    display: block;
+    position: relative;
+    left: 200px;
+    top: -50px;
+    background-position: -388px -38px;
+}
+
+.botton:active {
+    background-position: -550px -38px;
+}
