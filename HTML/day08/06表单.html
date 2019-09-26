@@ -1,12 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Document</title>
 </head>
+
 <body>
-    
+    <!-- 
+        标签form 表单
+    -->
+    <form action="../test.html">
+        <!--
+            设置表单项分组
+            用标签 fieldest
+        -->
+        <fieldset>
+            <!--
+                用标签legend
+                设置组名
+            -->
+            <legend>用户信息</legend>
+            <!-- 
+            text
+                文本框，用来输入文本常用于输入明文
+            属性value
+                输入文本栏内的默认值
+            -->
+            <label for="um">账户:</label>
+            <!-- 
+            label标签
+            专门设置提示文字
+
+            可指定一个for属性，该属性的值需要指定一个表单项的id值
+            若设置了一个id值，则可通过点击标签 直接选中相关表单项
+
+            -->
+            <input id="um" type="text" name="username" value="hhhhh">
+            </br>
+            <!-- 
+            type值  password
+                密码框，常用于输入密码
+            
+            -->
+            <label for="pw">密码:</label>
+            <input id="pw" type="password" name="password">
+            </br>
+        </fieldset>
+        <!-- 
+            单选按钮 type值 radio
+                使用input来创建一个单选按钮，他的type值是radio
+                通过name属性进行分组，name相同是一组
+                对于不需要用户直接填写的表单项，必须指定一个value值
+                这样提交表单的时候将提交value的值
+
+            若要默认选中 则新增属性checked="checked"
+        -->
+        性别
+        <input type="radio" name="sex" value="mans" id="man"><label for="man">男</label>
+        <input type="radio" name="sex" value="woman">女
+        </br>
+        <!--
+            多选框 type值 checkbox
+         -->
+        <input type="checkbox" name="sport" value="football">足球
+        <input type="checkbox" name="sport" value="baskball">篮球
+        <input type="checkbox" name="sport" value="tennis">网球
+        <input type="checkbox" name="sport" value="table_tennis">乒乓球
+        <br>
+        <!-- 
+             下拉列表 select
+             name属性指定给select
+             value属性指定给option
+
+             若设置默认显示
+             属性selected="selected"
+
+             设置默认列表展开 多选 显示
+             属性 multiple="multiple"
+         -->
+        <select name="多选" id="" multiple="multiple">
+            <!-- 
+                若要设置分组 
+                使用optgroup标签
+
+                通过属性 label对分组进行命名
+             -->
+            <optgroup label="女">
+                <!-- 
+                使用option创建选项
+            -->
+                <option value="fbb">范冰冰</option>
+                <option value="lxr">林心如</option>
+            </optgroup>
+
+            <optgroup label="男">
+                <!-- 
+                    使用标签 option创建选项
+                -->
+                <option value="gdg" selected="selected">郭德纲</option>
+                <option value="wj">王晶</option>
+            </optgroup>
+
+        </select>
+        <br>
+        <!-- 
+            使用标签 textarea创建文本域
+            适用于需要输入多行文本的地方
+            例如发帖
+        -->
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br>
+        <!-- 
+            属性type 值reset 重置
+            将表单中的内容设置为默认值
+        -->
+        <input type="reset" value="">
+        <br>
+        <!-- 
+            属性type 值botton 按钮
+            将表单中的内容设置为默认值
+        -->
+        <input type="button" value="">
+        <br>
+        <!-- 
+            除了使用input标签创建按钮
+            也可以直接使用button标签创建
+        -->
+        <button type="reset">重置</button>
+        <button type="submit">提交</button>
+        <button type="button">按钮</button>
+        <br>
+        <input type="submit" value="提交">
+    </form>
 </body>
+
 </html>
