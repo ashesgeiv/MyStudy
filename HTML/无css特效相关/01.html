@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            box-sizing: border-box;
+
+        }
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 
+            因为绝对定位改变的位置是以左上角为坐标点
+            top:50% left:50只是移动左上角
+            但是中心点是没有居中的
+            
+            要想居中只需要把左上角的坐标逆向移动50%即可
+            如果使用margin来进行逆向移动，虽说可以但是与父元素的耦合性太强
+            所以就使用方法 translate.
+
+            居中也可以使用弹性布局来进行居中
+             */
+            transform: translate(-50%,-50%);
+            
+            /* 
+            属性transition
+            为存在移动的元素设置一个过渡
+            1s为变化持续的时间
+             */
+            transition: 1s;
+
+        }
+
+        div:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+
+        }
+
+        div:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+
+        }
+
+        div:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        main:hover div:nth-child(2) {
+            /* 
+            方法translateX
+            将元素往X轴移动
+            */
+            transform: translateX(100px);
+        }
+
+        main:hover div:nth-child(1) {
+            /* 
+            方法translateY
+            将元素往Y轴移动
+             */
+            transform: translateY(-100px);
+        }
+
+        main:hover div:nth-child(3) {
+            /* 
+            方法translate
+            将元素往X轴,Y轴移动
+            */
+            transform: translate(-100px,100px);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+</body>
+
+</html>
