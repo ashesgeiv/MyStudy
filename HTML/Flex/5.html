@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            height: 50px;
+            background-color: #eeeeee;
+            border-top: 1px black solid;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        section {
+            flex: 1;
+            border-right: 1px black solid;
+            display: flex;
+            flex-direction: column-reverse;
+            
+        }
+        section h4{
+            display: flex;
+            flex: 0 0 50px;
+            justify-content: center;/*主轴对齐方式*/
+            align-items: center;
+        }
+        section ul{
+            border: 1px solid black;
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        section ul li{
+            flex: 0 0 50px;
+            border-bottom: 1px black solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section ul li:last-child{
+            border-bottom: none;
+        }
+
+        section:last-child {
+            border-right: none;
+        }
+
+        main {
+            flex: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main></main>
+    <footer>
+        <section>
+            <h4>教程</h4>
+            <ul>
+                <li>php</li>
+                <li>css</li>
+            </ul>
+        </section>
+        <section>
+            <h4>教程</h4><ul>
+                    <li>php</li>
+                    <li>css</li>
+                </ul>
+        </section>
+        <section>
+            <h4>教程</h4>
+        </section>
+    </footer>
+</body>
+
+</html>
