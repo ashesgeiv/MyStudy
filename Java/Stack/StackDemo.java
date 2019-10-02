@@ -11,6 +11,8 @@ class Stack {
         num = size;
     }
 
+    
+
     void push(int Empty) {
         ++top;
         array[top] = Empty;
@@ -18,7 +20,9 @@ class Stack {
 
     int pop() {
         top--;
-        return array[top+1];
+        return array[top + 1];
+    }
+    boolean fullStack(){
         
     }
 }
