@@ -1,4 +1,7 @@
 // var创建变量
-var a = 'helloworld"dddd"';
-var b = 'helloworld"dddd"'
-alert(a-b);// 在警告框中打印
+var a = 111;
+var b = 'helloworld"dddd"';
+var c =null;
+a=String(a);
+document.write(typeof a);
+document.write(a);
