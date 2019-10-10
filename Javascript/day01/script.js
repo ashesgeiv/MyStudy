@@ -3,6 +3,9 @@ var a = 1;
 var b = '111';
 var c ;
 var d = null;
-c=b-1;
+// && 与
+c=true&&3
+// || 或
+c=-'5'<'6'
 document.write(typeof c);
 document.write(c);
