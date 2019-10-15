@@ -3,8 +3,8 @@
  */
 
 class Element {
-  static char data;
-  static Element pointer=null;
+  char data = 0;
+  static Element pointer;
 }
 
 class LinkList1 {
@@ -12,30 +12,24 @@ class LinkList1 {
   Element head;
   Element pElement;
 
- 
   LinkList1() {
-    
-    
+
   }
 
-  
   Element makeNewElement() {
     return new Element();
   }
-
- 
 
   void put(char data) {
     Element p = makeNewElement();
     p.data = data;
     pElement.pointer = p;
     pElement = p;
-     System.out.println("-1");
+    System.out.println("-1");
   }
 
- 
   void put(char data, int num) {
-   
+
     Element p = chaXun(num);
     Element pNew = makeNewElement();
     pNew.data = data;
@@ -43,14 +37,12 @@ class LinkList1 {
     p.pointer = pNew;
   }
 
-  
   void delete(int num) {
     Element p = chaXun(num - 1);
     Element pNew = p.pointer;
     p.pointer = pNew.pointer;
   }
 
- 
   Element chaXun(int num) {
 
     Element p = head.pointer;
@@ -61,32 +53,32 @@ class LinkList1 {
     return p;
   }
 
- 
   void tongJi() {
     int i = 0;
     Element p = head.pointer;
-    if (p== null) {
+    if (p == null) {
       System.out.println("-1");
     }
-    
+
     for (; p.pointer != null; i++) {
       p = p.pointer;
     }
     System.out.println(i);
   }
-  void show(){
-    
+
+  void show() {
+
     Element p = head.pointer;
-    while (p.pointer!=null) {
+    while (p.data != 0) {
       System.out.println(p.data);
-      p=p.pointer;
+      p = p.pointer;
     }
   }
 }
 
 public class Main {
   public static void main(String[] args) {
-    LinkList1 list1 =new LinkList1();
+    LinkList1 list1 = new LinkList1();
     list1.put('x');
     list1.show();
   }
