@@ -9,3 +9,4 @@ c=true&&3
 c=-'5'<'6'
 document.write(typeof c);
 document.write(c);
+alert
