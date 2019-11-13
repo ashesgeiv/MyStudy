@@ -1,122 +1,108 @@
-#include<stdio.h>
-#include<malloc.h>
 
-typedef struct element {
-	char data;
-	struct student* next;
-}LinkList;
-//初始化
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#pragma warning(disable:4996)
+#define ElementType char //存储数据元素的类型
+#define MAXSIZE 6 //存储数据元素的最大个数
+#define ERROR -99 //ElementType的特殊值，标志错误
 
-LinkList* creat(int n) {
-	LinkList* head, * node, * end;
-	head = (LinkList*)malloc(sizeof(LinkList));
-	end = head;         
-	for (int i = 0; i < n; i++) {
-		node = (LinkList*)malloc(sizeof(LinkList));
-		scanf("%c", &node->data);
-		end->next = node;
-		end = node;
-	}
-	end->next = NULL;
-	return head;
-}
+typedef struct {
+	ElementType data[MAXSIZE];
+	int front; //记录队列头元素位置
+	int rear; //记录队列尾元素位置
+	int size; //存储数据元素的个数
+}Queue;
 
-//改内容  
-void change(LinkList* list, int n) {//n为第n个节点
-	LinkList* t = list;
-	int i = 0;
-	while (i < n && t != NULL) {
-		t = t->next;
-		i++;
+Queue* CreateQueue() {
+	Queue* q = (Queue*)malloc(sizeof(Queue));
+	if (!q) {
+		printf("空间不足\n");
+		return NULL;
 	}
-	if (t != NULL) {
-		puts("输入要修改的值");
-		scanf("%c", &t->data);
-	}
-	else {
-		puts("节点不存在");
-	}
-}
-//删节点
-void delet(LinkList* list, int n) {
-	LinkList* t = list, * in;
-	int i = 0;
-	while (i < n && t != NULL) {
-		in = t;
-		t = t->next;
-		i++;
-	}
-	if (t != NULL) {
-		in->next = t->next;
-		free(t);
-	}
-	else {
-		puts("节点不存在");
-	}
+	q->front = -1;
+	q->rear = -1;
+	q->size = 0;
+	return q;
 }
 
-void insert(LinkList* list, int n) {
-	LinkList* t = list, * in;
-	int i = 0;
-	while (i < n && t != NULL) {
-		t = t->next;
-		i++;
-	}
-	if (t != NULL) {
-		in = (LinkList*)malloc(sizeof(LinkList));
-		puts("输入要插入的值");
-		scanf("%c", &in->data);
-		in->next = t->next;//填充in节点的指针域，也就是说把in的指针域指向t的下一个节点
-		t->next = in;//填充t节点的指针域，把t的指针域重新指向in
-	}
-	else {
-		puts("节点不存在");
-	}
+int IsFullQ(Queue* q) {
+	return (q->size == MAXSIZE);
 }
-void show(LinkList* h) {
-	while (h->next != NULL) {
-		h = h->next;
-		printf("%d  ", h->data);
+
+void AddQ(Queue* q, ElementType item) {
+	if (IsFullQ(q)) {
+		printf("队列已满\n");
+		return;
 	}
+	q->rear++;
+	q->rear %= MAXSIZE;
+	q->size++;
+	q->data[q->rear] = item;
 }
-int main() {
+
+int IsEmptyQ(Queue* q) {
+	return (q->size == 0);
+}
+
+ElementType DeleteQ(Queue* q) {
+	if (IsEmptyQ(q)) {
+		printf("空队列\n");
+		return ERROR;
+	}
+	q->front++;
+	q->front %= MAXSIZE; //0 1 2 3 4 5
+	q->size--;
+	return q->data[q->front];
+}
+
+void PrintQueue(Queue* q) {
+	if (IsEmptyQ(q)) {
+		printf("空队列\n");
+		return;
+	}
+	printf("打印队列数据元素：\n");
+	int index = q->front;
+	int i;
+	for (i = 0; i < q->size; i++) {
+		index++;
+		index %= MAXSIZE;
+		printf("%c ", q->data[index]);
+	}
+	printf("\n");
+}
+
+int main(int argc, const char* argv[]) {
+	Queue* q = CreateQueue();
 	char ch;
-	LinkList* h;
-	int num;
-	while ((ch=getchar)!='q')
+	char data;
+	printf("默认已创建队列，请选择\n");
+	printf("1,入队列\n");
+	printf("2，出队列\n");
+	printf("3.遍历\n");
+	while ((ch=getche())!='q')
 	{
-		printf("请选择你要用的功能,按q退出\n");
-		printf("a,初始化\tb，插入元素\n");
-		printf("c,删除元素\td,统计元素");
-		if ('\n'==ch)
+		switch (ch)
 		{
-			continue;
+		case '1':
+			printf("所输入的值");
+			data = getche();
+			AddQ(q,data);
+			PrintQueue(q);
+			break;
+		case '2':
+			DeleteQ(q);
+			PrintQueue(q);
+			break;
+		case '3':PrintQueue(q);
+			break;
+		
+		default:
+			break;
 		}
-		else
-		{
-			switch (ch)
-			{
-			case 'a':
-				
-				scanf("%d", &num);
-				h = creat(num);
-				break;
-			case 'b':
-				printf("要插入到几号元素之后\n");
-				scanf("%d", &num);
-				insert(h, num);
-				break;
-			case 'c':
-				printf("要插入到几号元素之后\n");
-				int num;
-				scanf("%d", &num);
-				delete(head, num);
-				break;
-			case 'd':
-			default:
-				break;
-			}
-		}
+		printf("\n请输入\n");
 	}
 	
+
+	return 0;
 }
