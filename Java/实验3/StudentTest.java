@@ -79,7 +79,7 @@ class Student {
            information+=" 专业:"+speciality;
        }
        if (!sex.equals("")) {
-           information+=" 性别:"+sex;
+           information+=" 性别："+sex;
        }
        return information;
     }

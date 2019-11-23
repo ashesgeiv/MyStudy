@@ -76,7 +76,7 @@ class Student {
            information+=" 生日:"+birthday;
        }
        if (!speciality.equals("")) {
-           information+=" 专业:"+speciality;
+           information+=" 专业："+speciality;
        }
        if (!sex.equals("")) {
            information+=" 性别:"+sex;

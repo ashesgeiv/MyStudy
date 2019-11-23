@@ -4,15 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - TimeTest",
             "request": "launch",
-            "mainClass": "TimeTest",
-            "projectName": "实验3_31b4d65d"
+            "mainClass": "TimeTest"
         },
         {
             "type": "java",
             "name": "CodeLens (Launch) - StudentTest",
             "request": "launch",
-            "mainClass": "StudentTest",
-            "projectName": "实验3_31b4d65d"
+            "mainClass": "StudentTest"
         }
     ]
 }
