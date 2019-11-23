@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - StudentTest",
+            "request": "launch",
+            "mainClass": "StudentTest",
+            "projectName": "Java_51d7c127"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TimeTest",
+            "request": "launch",
+            "mainClass": "实验3.TimeTest",
+            "projectName": "Java_51d7c127"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - StudentTest",
+            "request": "launch",
+            "mainClass": "实验3.StudentTest",
+            "projectName": "Java_51d7c127"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - test",
             "request": "launch",
             "mainClass": "test",
