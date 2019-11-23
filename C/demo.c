@@ -13,6 +13,7 @@ typedef struct Sportsmans
     char school_Name[];//学校名字
     int score; //个人得分
     int rank; //个人排名
+    int item_number//项目编号
     struct Sportsman *next;
 }Sportsman;
 typedef struct Items
